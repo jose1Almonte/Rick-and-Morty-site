@@ -16,7 +16,7 @@ function Card({character}) {
 
           <div className={styles.statusRow}>
 
-            <div className={character.status == "Alive" ? styles.statusCircleAlive : styles.statusCircleDead}/>
+            <div className={character.status == "Alive" ? styles.statusCircleAlive : (character.status == "Dead" ? styles.statusCircleDead : styles.statusCircleUnknown)}/>
             <p className={styles.statusSpecies}>{character.status} - {character.species}</p>
             
           </div>
