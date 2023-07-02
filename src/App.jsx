@@ -1,33 +1,67 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// import './App.css';
+import Card from './components/Card/Card';
+import styles from './App.module.css'
+import Rick from './vectores/Rick';
+import Morty from './vectores/Morty';
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const characters = [
+    {
+      name: "Dr. Xenon Bloom",
+      last_known_location: "Anatomy Park",
+      status: "Dead",
+      first_seen_in: "Anatomy Park",
+      species: "Humanoid",
+      image: { uri: "https://rickandmortyapi.com/api/character/avatar/108.jpeg" }
+    },
+    {
+      name: "Lucy",
+      last_known_location: "Earth (Replacement Dimension)",
+      status: "Dead",
+      first_seen_in: "Ricksy Business",
+      species: "Human",
+      image: { uri: "https://rickandmortyapi.com/api/character/avatar/210.jpeg" }
+    },
+    {
+      name: "Truth Tortoise",
+      last_known_location: "unknown",
+      status: "Unknown",
+      first_seen_in: "Morty's Mind Blowers",
+      species: "Mythological Creature",
+      image: { uri: "https://rickandmortyapi.com/api/character/avatar/368.jpeg" }
+    },
+    {
+      name: "Bearded Jerry",
+      last_known_location: "Jerryboree",
+      status: "Alive",
+      first_seen_in: "Mortynight Run",
+      species: "Human",
+      image: { uri: "https://rickandmortyapi.com/api/character/avatar/441.jpeg" }
+    },
+  ];
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+
+      <div className={styles.titleBox}>
+        <div className={styles.vectorsBox}>
+          <Rick styles={styles.vectorRick}/>
+          <Morty styles={styles.vectorMorty}/>
+        </div>
+        <p className={styles.pageTitle}> The Rick and Morty API </p>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+    
+      <div className={styles.cardsContainer}>
+
+        {characters.map((character) => (
+          <>
+          <Card character={character}/>
+          {/* <img src={character.image}/> */}
+          </>
+        ))}
+
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
