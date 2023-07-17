@@ -157,3 +157,15 @@
     font-kerning: normal;
     font-feature-settings: "kern", "liga", "clig", "calt";
 }
+
+/* .linkStyles{
+    background-color: white;
+} */
+
+.link{
+    text-decoration: none;
+}
+
+.link:hover .name {
+    color: rgb(255, 152, 0); /* Cambia "red" por el color deseado */
+}

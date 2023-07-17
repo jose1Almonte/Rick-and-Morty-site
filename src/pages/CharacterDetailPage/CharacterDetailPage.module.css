@@ -1,0 +1,56 @@
+.bigBox {
+    display: flex;
+    flex-direction: row;
+    /* background-color: red; */
+    /* height: 290px; */
+    overflow: hidden;
+
+    align-items: center;
+    margin-left: 10%;
+    margin-top: 2%;
+    /* justify-content: center; */
+}
+
+/* .imageBox {
+} */
+
+.image {
+    height: 100%;
+}
+
+.descriptionBox {
+    margin-left: 3%;
+    /* background-color: blue; */
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+
+    justify-content:center;
+}
+
+.title {
+    color: #E2DFDB;
+    font-size: 1.5rem;
+    font-family: -apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+    font-weight: 800;
+    line-height: 1.1;
+    /* background-color: green; */
+    margin-bottom: 3%;
+}
+
+.description {
+    color: #E8E6E3;
+    word-wrap: break-word;
+    font-kerning: normal;
+    font-family: -apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+    font-feature-settings: "kern", "liga", "clig", "calt";
+    font: 112.5%/1.625 -apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+    -webkit-text-size-adjust: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    /* background-color: yellow; */
+
+    margin-bottom: 1%;
+}

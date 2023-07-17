@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import styles from './Card.module.css'
+import { Link } from 'react-router-dom';
 
 function Card({character}) {
   
@@ -12,7 +13,9 @@ function Card({character}) {
 
       <div className={styles.rightBox}>
         <div className={styles.firstRow}>
-          <p className={styles.name}>{character.name}</p>
+          <Link to={`/characters/${character.id}`} className={styles.link} target="_blank" rel="noopener noreferrer">
+            <p className={styles.name}>{character.name}</p>
+          </Link>
 
           <div className={styles.statusRow}>
 
