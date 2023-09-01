@@ -37,7 +37,8 @@ body {
     color: #D1CDC7;
     font-family: -apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
     font-weight: 900;
-    font-size: 5.75rem;
+    font-size: 5.75vw;
+    /* font-size: calc(12px + 5.75vw); */
     z-index: 1;
 }
 
