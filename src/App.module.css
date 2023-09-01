@@ -1,5 +1,6 @@
 body {
     background-color: rgb(32, 35, 41);
+    min-height: 100vh;
 }
 .titleBox{
     height: 225px;
